@@ -1,0 +1,163 @@
+body {
+  background-color: #00cc88;
+  font-family: 'Fondamento', cursive;
+}
+
+.headline {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.subline {
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.description-container {
+  display: grid;
+  grid-gap: 10px;
+  padding: 20px;
+  justify-content: flex-start;
+}
+
+.description {
+  background-color: aquamarine;
+  align-items: center;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.text {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.pic {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: darkgoldenrod;
+}
+
+.picture {
+  height: 400px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.ingredients {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.instructions {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.recipe-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  font-size: 14px;
+}
+
+.ing-li {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.ins-li {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.comment-container {
+  height: auto;
+  background-color: aquamarine;
+  grid-row: 2;
+  grid-column: 1 / 5;
+  border-radius: 10px;
+  padding: 20px;
+  align-items: center;
+}
+
+.comment-box {
+  margin: 0;
+  grid-column: 1 / 5;
+  background-color: aquamarine;
+  border-radius: 10px;
+  display: flex; 
+  align-items: center;
+  justify-content: flex-start;
+}
+
+textarea {
+  width: 400px;
+  height: 100px;
+  margin-bottom: 15px;
+  padding: 15px;
+  resize: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.comment-box button{
+  width: 80px;
+  height: 30px;
+  background-color: #00cc88;
+  border-style: inset;
+  border-radius: 10px;
+  border-color: darkgoldenrod;
+  font-family: 'Fondamento', 'cursive';
+  cursor: pointer;
+  float: left;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.comment-container button {
+  width: 80px;
+  height: 30px;
+  background-color: #00cc88;
+  border-style: inset;
+  border-radius: 10px;
+  border-color: darkgoldenrod;
+  font-family: 'Fondamento', 'cursive';
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: aquamarine;
+}
+
+.com-li {
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.user-li {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.username{
+  color: darkred;
+  font-size: 18px;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.date{
+  font-size: 18px;
+  padding-top: 10px;
+  padding-left: 15px;
+  text-decoration: underline;
+}
+
+.message {
+  font-size: 13px;
+  padding-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}

@@ -1,0 +1,60 @@
+.navbar_section {
+  display: flex;
+  background-color: darkslategray;
+  height: 31px;
+}
+
+.nav-link:link{
+  text-decoration: none;
+  padding: 12px 20px;
+  background-color: aquamarine;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.nav-link:visited {
+  color: darkslategray;
+}
+
+.nav-link.active {
+  background-color: #00cc88;
+}
+
+.nav-link:hover {
+
+  background-color: #00cc88;
+}
+
+.nav {
+  float: left;
+  margin: 0;
+}
+
+.login {
+  position: absolute;
+  right: 0;
+  top: 121px;
+}
+
+.logout {
+  position: absolute;
+  right: 166px;
+  top: 121px;
+}
+
+.signup {
+  position: absolute;
+  right: 78px;
+  top: 121px;
+}
+
+.logged-user {
+  padding: 12px 20px;
+  color: darkgoldenrod;
+  background-color: aquamarine;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  top: 121px;
+  right: 88px;
+}

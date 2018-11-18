@@ -1,0 +1,34 @@
+body {
+  background-color: #00cc88;
+  font-family: 'Fondamento', cursive;
+  color: darkslategray;
+}
+
+.flex-container {
+  padding-top: 100px;
+  background-color: #00cc88;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 23px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  color: darkred;
+  font-size: 12px;
+  padding: 15px;
+  text-align: center;
+}
+
+.flex-container h2, .flex-container h3 {
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+}

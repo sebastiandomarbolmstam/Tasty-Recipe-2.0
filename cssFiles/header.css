@@ -1,0 +1,10 @@
+.flex-header {
+  background-color: darkslategray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  font-family: "Great Vibes", cursive;
+  font-size: 48px;
+  color: darkgoldenrod;
+}
