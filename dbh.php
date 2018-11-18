@@ -1,7 +1,7 @@
 <?php
 $severename = "127.0.0.1";
 $dbUsername = "root";
-$dbPassword = "*****";
+$dbPassword = "z8Y47fjarSy";
 $dbName = "loginsystemtut";
 
 $conn = mysqli_connect($severename, $dbUsername, $dbPassword, $dbName);

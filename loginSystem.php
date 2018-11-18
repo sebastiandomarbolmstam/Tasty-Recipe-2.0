@@ -8,7 +8,7 @@ if(isset($_POST['login-sub'])){
   $password = $_POST['pwd'];
 
   if(empty($username) || empty($password)){
-    header("Location: ../login.php?error=blankfield");
+    header("Location: ../SeminarTwo/login.php?error=blankfield");
     exit();
   }
 
@@ -16,7 +16,7 @@ if(isset($_POST['login-sub'])){
     $sql = "SELECT * FROM users WHERE uidUsers=?;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
-      header("Location: ../login.php?error=sql");
+      header("Location: ../SeminarTwo/login.php?error=sql");
       exit();
     }
     else {
@@ -26,23 +26,23 @@ if(isset($_POST['login-sub'])){
       if($row = mysqli_fetch_assoc($result)){
         $pwdCheck = password_verify($password, $row['pwdUsers']);
         if($pwdCheck == false){
-          header("Location: ../login.php?error=invalidpassword");
+          header("Location: ../SeminarTwo/login.php?error=invalidpassword");
           exit();
         }
         elseif ($pwdCheck == true) {
           session_start();
           $_SESSION['userID'] = $row['idUsers'];
           $_SESSION['userUID'] = $row['uidUsers'];
-          header("location:../SeminarTwo/index.php?success=loggedin");
+          header("location:../SeminarTwo/index.php?loggedin=true");
           exit();
         }
         else {
-          header("Location: ../login.php?error=sql");
+          header("Location: ../SeminarTwo/login.php?error=sql");
           exit();
         }
       }
       else {
-        header("Location: ../login.php?error=sql");
+        header("Location: ../SeminarTwo/login.php?error=sql");
         exit();
       }
     }
@@ -50,6 +50,6 @@ if(isset($_POST['login-sub'])){
 }
 
 else {
-  header("Location: ../login.php?error=infonotsent");
+  header("Location: ../SeminarTwo/login.php?error=sql");
   exit();
 }

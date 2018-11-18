@@ -4,6 +4,15 @@
 
  <?php
    if($previous == 'index'){
+     if($_GET['signedup']){
+       echo '<div class="flex-container"><h2>
+       You have successfully signed up!
+       </h2</div>';
+     }elseif ($_GET['loggedin']) {
+       echo '<div class="flex-container"><h2>
+       You have successfully logged in!
+       </h2</div>';
+     }
     echo '<div class="flex-container">
      <div class="flex-text">
       <h2>Welcome to Tasty Recipes - your site for finding new
@@ -140,7 +149,7 @@
          <div class="calendar-day booked-day">
            <div class="number">4</div>
            <div class="image">
-             <a class="calendar-link" href="pancakes.html">
+             <a class="calendar-link" href="pancakes.php">
                <img class="pancake-picture" src="pics/pancakes.jpg" alt="pancake picture">
              </a>
            </div>
@@ -172,7 +181,7 @@
          <div class="calendar-day booked-day">
            <div class="number">22</div>
            <div class="image">
-             <a class="calendar-link" href="meatballs.html">
+             <a class="calendar-link" href="meatballs.php">
                <img class="picture" src="pics/meatballs.jpg" alt="Meatballs picture">
              </a>
            </div>
@@ -200,9 +209,17 @@
    elseif($previous == 'login'){
       echo '<div class="container">
       <div class="form-content">
-        <form action="loginSystem.php" method="post">
-          <p>Enter your username and password</p>
-           <input type="text" name="usn" placeholder="Enter username">
+        <form action="loginSystem.php" method="post">';
+        if($_GET['error']=='sql'){
+          echo "<p class='errorM'>Something went wrong. Try again!</p>";
+        }elseif ($_GET['error']=='blankfield') {
+          echo "<p class='errorM'>You need to fill out all fields to sign up!</p>";
+        }elseif ($_GET['error']=='invalidpassword'){
+          echo "<p class='errorM'>Wrong password!</p>";
+        }else{
+          echo "<p>Enter your username and password</p>";
+        }
+           echo '<input type="text" name="usn" placeholder="Enter username">
            <input type="password" name="pwd" placeholder="Enter password">
            <button type="submit" name="login-sub">Login</button>
          </form>
@@ -224,9 +241,20 @@
    elseif($previous == 'signup'){
       echo '<div class="container">
       <div class="form-content">
-          <form action="signupSystem.php" method="post">
-          <p>Enter your desired username and password</p>
-          <input type="text" name="usn" placeholder="Enter username">
+          <form action="signupSystem.php" method="post">';
+          if($_GET['error']=='sql'){
+            echo "<p class='errorM'>Something went wrong. Try again!</p>";
+          }elseif ($_GET['error']=='blankfield') {
+            echo "<p class='errorM'>You need to fill out all fields to sign up!</p>";
+          }elseif ($_GET['error']=='passwordmissmatch'){
+            echo "<p class='errorM'>You need to fill out all fields to sign up!</p>";
+          }elseif ($_GET['error']=='invalidform'){
+            echo "<p class='errorM'>You can only use alphabetic characters and numbers in your
+            username and password. Try again!</p>";
+          }else{
+            echo "<p>Enter your desired username and password</p>";
+          }
+          echo '<input type="text" name="usn" placeholder="Enter username">
           <input type="password" name="pwd" placeholder="Enter password">
           <input type="password" name="pwd-repeat" placeholder="Repeat password">
           <button type="submit" name="signup-sub">Signup</button>

@@ -53,3 +53,7 @@ button {
 button:hover {
   background-color: aquamarine;
 }
+
+.errorM {
+  color: red;
+}
